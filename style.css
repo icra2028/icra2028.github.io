@@ -1,0 +1,559 @@
+:root {
+  --ink: #123a36;
+  --ink-deep: #0a2926;
+  --jade: #1d5a50;
+  --sage: #9ab7a5;
+  --cream: #f4efe4;
+  --paper: #fffdf8;
+  --gold: #d49b48;
+  --peach: #e7b58a;
+  --line: rgba(18, 58, 54, 0.24);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink-deep);
+  font-family: var(--sans);
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  color: var(--jade);
+}
+
+.conference-header {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+#header-placeholder {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  align-items: center;
+  display: flex;
+  gap: 42px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 72px;
+  padding: 14px 28px;
+}
+
+.site-name {
+  color: var(--paper);
+  flex: 0 0 auto;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-name span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: var(--paper);
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.title-section {
+  display: grid;
+  gap: 55px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(310px, 0.8fr);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 75px 28px 80px;
+}
+
+.title-copy {
+  align-self: center;
+}
+
+.conference-number {
+  color: var(--jade);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--ink-deep);
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: normal;
+  margin: 0;
+  max-width: 760px;
+}
+
+.title-place {
+  color: var(--jade);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  margin: 30px 0 4px;
+}
+
+.title-date {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.image-placeholder {
+  align-items: center;
+  background:
+    linear-gradient(45deg, rgba(18, 58, 54, 0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(18, 58, 54, 0.035) 25%, transparent 25%),
+    var(--paper);
+  background-position: 0 0, 12px 12px;
+  background-size: 24px 24px;
+  border: 2px dashed var(--jade);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 360px;
+  padding: 35px;
+  text-align: center;
+}
+
+.placeholder-symbol {
+  align-items: center;
+  border: 1px solid var(--jade);
+  border-radius: 50%;
+  color: var(--jade);
+  display: flex;
+  font-family: var(--serif);
+  font-size: 2rem;
+  height: 60px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 60px;
+}
+
+.image-placeholder p {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  margin: 0 0 8px;
+}
+
+.image-placeholder span {
+  color: var(--jade);
+  font-size: 0.85rem;
+  max-width: 280px;
+}
+
+.content-section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 70px 28px;
+  scroll-margin-top: 120px;
+}
+
+.content-section > h2 {
+  border-bottom: 3px solid var(--gold);
+  color: var(--ink-deep);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0 0 35px;
+  padding-bottom: 10px;
+}
+
+.about-section,
+.award-section {
+  background: var(--paper);
+  max-width: none;
+  padding-left: max(28px, calc((100vw - 1144px) / 2));
+  padding-right: max(28px, calc((100vw - 1144px) / 2));
+}
+
+.about-text,
+.award-intro {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  max-width: 900px;
+}
+
+.about-text p,
+.award-intro p {
+  margin: 0 0 18px;
+}
+
+.previous-link,
+.award-link {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+.meeting-grid,
+.organisation-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.meeting-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 7px solid var(--jade);
+  padding: 32px;
+}
+
+.meeting-card:nth-child(2) {
+  border-top-color: var(--gold);
+}
+
+.meeting-type {
+  color: var(--jade);
+  font-size: 0.82rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  margin: 0 0 7px;
+  text-transform: uppercase;
+}
+
+.meeting-card h3 {
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: normal;
+  margin: 0 0 7px;
+}
+
+.meeting-date {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0 0 28px;
+}
+
+.meeting-card dl {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.meeting-card dt,
+.award-details dt {
+  color: var(--jade);
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.meeting-card dd,
+.award-details dd {
+  margin: 2px 0 0;
+}
+
+.speakers-section {
+  background: var(--jade);
+  color: var(--paper);
+  max-width: none;
+  padding-left: max(28px, calc((100vw - 1144px) / 2));
+  padding-right: max(28px, calc((100vw - 1144px) / 2));
+}
+
+.speakers-section > h2 {
+  border-color: var(--peach);
+  color: var(--paper);
+}
+
+.simple-columns {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1fr;
+}
+
+.simple-columns > div {
+  background: rgba(255, 253, 248, 0.08);
+  border: 1px solid rgba(255, 253, 248, 0.35);
+  padding: 28px;
+}
+
+.simple-columns h3,
+.organisation-grid h3,
+.award-block h3,
+.recipients-heading {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: normal;
+  margin: 0 0 22px;
+}
+
+.to-come {
+  font-style: italic;
+  margin: 0;
+}
+
+.award-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 35px;
+}
+
+.award-block {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.award-block ul {
+  list-style: square;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.award-block li {
+  margin: 7px 0;
+}
+
+.award-details dl {
+  margin: 0;
+}
+
+.award-details dl > div + div {
+  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  padding-top: 14px;
+}
+
+.award-details dd {
+  font-style: italic;
+}
+
+.award-format {
+  border-left: 4px solid var(--gold);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin: 34px 0;
+  max-width: 900px;
+  padding-left: 20px;
+}
+
+.recipients-heading {
+  margin-top: 40px;
+}
+
+.recipient-list {
+  column-gap: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: square;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.recipient-list li {
+  margin: 5px 0;
+}
+
+.organisation-grid {
+  align-items: start;
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
+.organisation-grid > div {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 30px;
+}
+
+.organiser-group + .organiser-group {
+  border-top: 1px solid var(--line);
+  margin-top: 25px;
+  padding-top: 22px;
+}
+
+.organiser-group h4 {
+  color: var(--jade);
+  font-size: 0.9rem;
+  margin: 0 0 9px;
+}
+
+.organiser-group ul {
+  list-style: square;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.organiser-group li {
+  margin: 4px 0;
+}
+
+.practical-section {
+  background: var(--peach);
+  max-width: none;
+  padding-left: max(28px, calc((100vw - 1144px) / 2));
+  padding-right: max(28px, calc((100vw - 1144px) / 2));
+}
+
+.practical-section p,
+.contact-section p {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 800px;
+}
+
+.contact-section {
+  background: var(--cream);
+  max-width: none;
+  padding-left: max(28px, calc((100vw - 1144px) / 2));
+  padding-right: max(28px, calc((100vw - 1144px) / 2));
+}
+
+.contact-section a {
+  font-weight: bold;
+}
+
+footer {
+  align-items: center;
+  background: var(--ink-deep);
+  color: var(--paper);
+  display: flex;
+  justify-content: space-between;
+  min-height: 120px;
+  padding: 28px max(28px, calc((100vw - 1144px) / 2));
+}
+
+footer strong {
+  font-family: var(--serif);
+}
+
+footer p {
+  font-size: 0.84rem;
+  margin: 5px 0 0;
+}
+
+footer a {
+  color: var(--paper);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .title-section {
+    gap: 38px;
+    grid-template-columns: 1fr;
+  }
+
+  .image-placeholder {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-inner {
+    padding: 18px 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    width: 100%;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  .title-section {
+    padding: 50px 20px 55px;
+  }
+
+  h1 {
+    font-size: 2.45rem;
+  }
+
+  .content-section,
+  .about-section,
+  .speakers-section,
+  .award-section,
+  .practical-section,
+  .contact-section {
+    padding: 55px 20px;
+  }
+
+  .meeting-grid,
+  .simple-columns,
+  .organisation-grid,
+  .award-grid,
+  .recipient-list {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-card {
+    padding: 25px;
+  }
+
+  .meeting-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
